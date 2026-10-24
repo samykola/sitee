@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 130" role="img" aria-label="CLIPROOM white" style="color:#FFFFFF">
+  <rect width="384" height="130" fill="#000000"/>
+  <defs>
+    <symbol id="clipro-mark-w" viewBox="18 18 92 92">
+      <path d="M104 52 L104 48
+               A24 24 0 0 0 80 24
+               L48 24
+               A24 24 0 0 0 24 48
+               L24 80
+               A24 24 0 0 0 48 104
+               L80 104
+               A24 24 0 0 0 104 80
+               C104 68 100 62 92 62"
+            fill="none" stroke="currentColor" stroke-width="7"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+  <use href="#clipro-mark-w" x="14" y="19" width="92" height="92"/>
+  <text x="126" y="79"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-size="38" font-weight="300" letter-spacing="4.5"
+        fill="currentColor">CLIPROOM</text>
+</svg>
