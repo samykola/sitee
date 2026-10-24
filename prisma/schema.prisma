@@ -3,8 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 enum Role {
@@ -82,7 +83,7 @@ model User {
   conversations   ConversationParticipant[]
   sentMessages    Message[]
   reposts         Repost[]
-  impressions    PostImpression[]
+  impressions     PostImpression[]
 }
 
 model Profile {
@@ -163,6 +164,7 @@ model Post {
   bookmarks Bookmark[]
   tags      PostTag[]
   views     View[]
+  impressions PostImpression[]
 
   @@index([authorId, createdAt])
   @@index([communityId, createdAt])
@@ -170,7 +172,6 @@ model Post {
   @@index([createdAt])
   @@index([likesCount])
   @@index([isTrending])
-  impressions   PostImpression[]
 }
 
 model PostMedia {
@@ -391,7 +392,6 @@ model AdminAction {
   createdAt  DateTime @default(now())
 }
 
-
 model Conversation {
   id            String   @id @default(cuid())
   isGroup       Boolean  @default(false)
@@ -444,7 +444,6 @@ model Message {
   @@index([conversationId, createdAt])
 }
 
-
 model Repost {
   id        String   @id @default(cuid())
   userId    String
@@ -458,7 +457,6 @@ model Repost {
   @@index([userId])
   @@index([createdAt])
 }
-
 
 model PostImpression {
   id             String   @id @default(cuid())
